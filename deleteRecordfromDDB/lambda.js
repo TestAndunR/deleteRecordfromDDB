@@ -14,14 +14,6 @@ exports.handler = function (event, context, callback) {
         //handle error
         console.log(err)
     });
-    ddb.put({
-        TableName: 'DbOperations',
-        Item: { 'name': 'Andun', 'city': 'Galle', 'job': 'QA' }
-    }).promise().then(function (data) {
-        //your logic goes here
-    }).catch(function (err) {
-        //handle error
-    });
 
 
     callback(null, 'Successfully executed');
